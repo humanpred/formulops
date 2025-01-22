@@ -1,5 +1,3 @@
-context("simplify_parens")
-
 test_that("simplify_parens doesn't change things that shouldn't change", {
   expect_equal(simplify_parens(~a), ~a)
   expect_equal(simplify_parens(a~b), a~b)

@@ -1,5 +1,3 @@
-context("substituting_formla")
-
 test_that("error checks work", {
   expect_error(
     as_substituting_formula(a~b, 1),
