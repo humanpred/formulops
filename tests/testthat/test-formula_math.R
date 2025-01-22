@@ -1,5 +1,3 @@
-context("Math and modification for formulae")
-
 test_that("modify_formula tests its inputs", {
   expect_error(
     modify_formula(a~b, find=list(), replace=quote(c)),
@@ -134,75 +132,75 @@ test_that("op_formula adds parentheses correctly to all combinations of one- and
   expect_equal(
     op_formula("*", ~c+d, ~g+h),
     ~(c+d)*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", ~c, ~g+h),
     ~c*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", ~c+d, ~g),
     ~(c+d)*g
-  )  
+  )
   expect_equal(
     op_formula("*", ~c, ~g),
     ~c*g
-  )  
+  )
 
   # two-sided
   expect_equal(
     op_formula("*", a+b~c+d, e+f~g+h),
     (a+b)*(e+f)~(c+d)*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", b~c+d, e+f~g+h),
     b*(e+f)~(c+d)*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", a+b~c, e+f~g+h),
     (a+b)*(e+f)~c*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", a+b~c+d, f~g+h),
     (a+b)*f~(c+d)*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", a+b~c+d, e+f~h),
     (a+b)*(e+f)~(c+d)*h
-  )  
+  )
 
   # Mixed one- and two-sided
   expect_equal(
     op_formula("*", ~c, e~g),
     e~c*g
-  )  
+  )
   expect_equal(
     op_formula("*", ~c, e+f~g),
     e+f~c*g
-  )  
+  )
   expect_equal(
     op_formula("*", ~c, e~g+h),
     e~c*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", ~c, e+f~g+h),
     e+f~c*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", ~c+d, e~g),
     e~(c+d)*g
-  )  
+  )
   expect_equal(
     op_formula("*", ~c+d, e+f~g),
     e+f~(c+d)*g
-  )  
+  )
   expect_equal(
     op_formula("*", ~c+d, e~g+h),
     e~(c+d)*(g+h)
-  )  
+  )
   expect_equal(
     op_formula("*", ~c+d, e+f~g+h),
     e+f~(c+d)*(g+h)
-  )  
+  )
 })
 
 test_that("Ops and convenience functions are equal", {

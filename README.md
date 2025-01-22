@@ -1,9 +1,9 @@
 # formulops
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/billdenney/formulops.svg?branch=master)](https://travis-ci.org/billdenney/formulops)
-[![Codecov test coverage](https://codecov.io/gh/billdenney/formulops/branch/master/graph/badge.svg)](https://codecov.io/gh/billdenney/formulops?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/formulops)](https://CRAN.R-project.org/package=formulops)
+[![R-CMD-check](https://github.com/humanpred/formulops/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/humanpred/formulops/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/humanpred/formulops/graph/badge.svg)](https://app.codecov.io/gh/humanpred/formulops)
 <!-- badges: end -->
 
 The goal of formulops is to assist with formula modification in R treating

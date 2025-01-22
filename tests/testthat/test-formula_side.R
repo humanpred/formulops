@@ -1,5 +1,3 @@
-context("formula_side")
-
 test_that("get_lhs works", {
   expect_equal(
     get_lhs(a~b),

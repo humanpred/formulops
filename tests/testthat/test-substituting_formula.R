@@ -1,5 +1,3 @@
-context("substituting_formla")
-
 test_that("error checks work", {
   expect_error(
     as_substituting_formula(a~b, 1),
@@ -30,11 +28,11 @@ test_that("error checks work", {
 
 test_that("formula are created correctly", {
   expect_equal(
-    formula(substituting_formula(a~b, b~c*d, d~e+f)),
+    formula(substituting_formula(a~b, b~c*d, d~(e+f))),
     a~c*(e+f)
   )
   expect_equal(
-    as.formula(substituting_formula(a~b, b~c*d, d~e+f), env=emptyenv()),
+    as.formula(substituting_formula(a~b, b~c*d, d~(e+f)), env=emptyenv()),
     `environment<-`(a~c*(e+f), emptyenv())
   )
 })
