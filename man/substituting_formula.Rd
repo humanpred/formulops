@@ -32,9 +32,9 @@ Formula are substituted in order.  Substitutions may not have the
 }
 \section{Functions}{
 \itemize{
-\item \code{as_substituting_formula}: Generate and check substituting_formula
-}}
+\item \code{as_substituting_formula()}: Generate and check substituting_formula
 
+}}
 \examples{
 foo <- substituting_formula(y~x1+x2, x1~x3*x4, x2~x5/x6+x7)
 as.formula(foo)

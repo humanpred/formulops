@@ -23,9 +23,9 @@ Extract formula parts
 }
 \section{Functions}{
 \itemize{
-\item \code{get_lhs}: Extract the left hand side (NULL for one-sided
+\item \code{get_lhs()}: Extract the left hand side (NULL for one-sided
 formula).
 
-\item \code{get_rhs}: Extract the right hand side.
-}}
+\item \code{get_rhs()}: Extract the right hand side.
 
+}}
